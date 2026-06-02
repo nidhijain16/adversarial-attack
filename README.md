@@ -1,10 +1,14 @@
 # Adversarial Attack Experiments
 
-This repository contains various scripts and Jupyter Notebooks for experimenting with adversarial attacks on machine learning models using the Adversarial Robustness Toolbox (ART) and TensorFlow/Keras.
+This repository contains various scripts and Jupyter Notebooks for experimenting with adversarial attacks on machine learning models using the Adversarial Robustness Toolbox (ART). It includes attacks on both image classification models (TensorFlow/Keras) and audio classification models (PyTorch).
 
 ## Structure
 
 The repository is organized into the following directories:
+
+### 1. `audio_attacks/`
+Contains scripts for experimenting with adversarial attacks on **Audio data**. This section is built using **PyTorch** and **Torchaudio**, featuring Digital Signal Processing (DSP) techniques.
+*   `audio_attack_pytorch.py`: An end-to-end pipeline demonstrating adversarial attacks (FGSM) on audio waveforms using PyTorch and ART. Includes generation of Mel-spectrograms to visualize the adversarial noise using `librosa`.
 
 ### 1. `cifar_attacks/`
 Contains Jupyter Notebooks for training models and testing adversarial attacks on the **CIFAR-10** dataset. It includes scripts to test different hyperparameters for attacks (e.g., varying `gamma` and `theta`).
@@ -27,9 +31,12 @@ Contains miscellaneous exploratory scripts.
 ## Requirements
 
 To run these scripts, you will need the following libraries:
+pip install torch torchaudio librosa matplotlib adversarial-robustness-toolbox
+*   PyTorch (`torch`, `torchaudio`)
 *   TensorFlow
 *   Keras
 *   Adversarial Robustness Toolbox (`adversarial-robustness-toolbox`)
+*   Librosa
 *   NumPy
 *   Pandas
 *   SciPy
